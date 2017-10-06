@@ -66,15 +66,20 @@ if(isset($_POST['submit']))
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                <h2>E-mail Results</h2>
                 <?php
-                if($result)
+                if(isset($result))
                 {
-                    echo '<p class="email-results bg-success">E-mail has been sent.</p>';
-                }
-                else
-                {
-                    echo '<p class="email-results bg-danger">E-mail failed to sent.</p>';
+                    ?>
+                    <h2>E-mail Results</h2>
+                    <?php
+                    if($result)
+                    {
+                        echo '<p class="email-results bg-success">E-mail has been sent.</p>';
+                    }
+                    else
+                    {
+                        echo '<p class="email-results bg-danger">E-mail failed to sent.</p>';
+                    }
                 }
                 ?>
             </div>
